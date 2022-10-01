@@ -1,4 +1,5 @@
 import myJson from "./data/dev/Darkshiira.json" assert { type: "json" };
+import linusJson from "./data/dev/linus.json" assert { type: "json" };
 // The webpage is built with different divs.
 //To modify the content you can each change the innerHTML of each divs when clicking on your button.
 
@@ -11,6 +12,11 @@ document.body.appendChild(div1);
 let buttonHanna = document.createElement("button");
 document.body.appendChild(buttonHanna);
 buttonHanna.innerHTML = `${myJson.firstname}`;
+
+//Linus button:
+let linusButton = document.createElement("button");
+document.body.appendChild(linusButton);
+linusButton.innerHTML = `${linusJson.firstname}`;
 
 //Name box:
 let div2 = document.createElement("div");
@@ -34,9 +40,22 @@ let div6= document.createElement("div");
 div6.innerHTML = `<h2>Hobbies: </h2>`
 div6.className = "div6"
 document.body.appendChild(div6);
+//Cat or Dog box
+let div7 = document.createElement('div')
+div7.innerHTML= `<h2>Cat or Dog: </h2>`
+document.body.appendChild(div7);
 //To add an img:
 let img = document.createElement("img");
 document.body.appendChild(img);
+
+
+//Gör att infon hamnar på samma rad som rubriken
+const divs = [div2,div3,div4,div5,div6]
+for(let data of divs){
+    data.style.display="flex"
+    data.style.alignItems="center"
+}
+
 
 //---------------When clicking on Hannas button:
 buttonHanna.addEventListener("click", function() {
@@ -56,3 +75,15 @@ myJson.Skills.Hobbies.forEach (function (hobby) {
     img.src = "https://t4.ftcdn.net/jpg/00/41/67/51/360_F_41675161_ZXCYtzeFlNMI5mQ51p4sa5flTttH9bHZ.jpg";
 });
 // ------------------When clicking on Hannas button ends here
+
+
+/*---------------------Linus Button------------------*/
+linusButton.addEventListener('click', function(){
+    div2.innerHTML = `<h2>Namn:</h2> <h3>${linusJson.firstname} ${linusJson.lastname}</h3>`
+    div3.innerHTML = `<h2>Github: </h2> <h3>${linusJson.github}</h3>`
+    div4.innerHTML = `<h2>Discord: </h2> <h3>${linusJson.discord}</h3>`
+    div5.innerHTML = `<h2>Skills: </h2> <h3>${linusJson.skills}</h3>`
+    div6.innerHTML = `<h2>Hobbies: </h2> <h3>${linusJson.hobbies}</h3>`
+    img.src = "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=300&q=60"
+  })
+ /*-----------------------------------------------------*/
