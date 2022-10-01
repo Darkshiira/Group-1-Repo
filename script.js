@@ -16,16 +16,16 @@ button.addEventListener("click", function() {
     for (let i = 0; i < (myJson.Skills.programming).length; i++) {
 
         let div = document.createElement("div");
-        div.innerHTML = `<h2>${[i+1]} ${myJson.Skills.programming[i]}</h2>`
+        div.innerHTML = `<h3>${[i+1]} ${myJson.Skills.programming[i]}</h3>`
         document.body.appendChild(div);
     }
     let div6= document.createElement("div");
-    div6.innerHTML = `<h2>Hobbies: </h2>`
+    div6.innerHTML = `<h3>Hobbies: </h3>`
     document.body.appendChild(div6);
     for (let i = 0; i < (myJson.Skills.Hobbies).length; i++) {
 
         let div = document.createElement("div");
-        div.innerHTML = `<h2>${[i+1]} ${myJson.Skills.Hobbies[i]}</h2>`
+        div.innerHTML = `<h3>${[i+1]} ${myJson.Skills.Hobbies[i]}</h3>`
         document.body.appendChild(div);
     }
 });
