@@ -5,29 +5,25 @@ let div1 = document.createElement("div");
 div1.innerHTML = `<h1>Group 1: </h1>`
 document.body.appendChild(div1);
 
-let button = document.createElement("button");
-document.body.appendChild(button);
-button.innerHTML = `${myJson.firstname}`;
-button.addEventListener("click", function() {
+let buttonHanna = document.createElement("button");
+document.body.appendChild(buttonHanna);
+buttonHanna.innerHTML = `${myJson.firstname}`;
+
+buttonHanna.addEventListener("click", function() {
     div2.innerHTML = `<h2>Namn:</h2> <h3>${myJson.firstname} ${myJson.lastname}</h3>`
     div3.innerHTML = `<h2>Github: </h2> <h3>${myJson.github}</h3>`
     div4.innerHTML = `<h2>Discord: </h2> <h3>${myJson.discord}</h3>`
 
-    for (let i = 0; i < (myJson.Skills.programming).length; i++) {
+    myJson.Skills.programming.forEach (function (skill) {
+        div5.innerHTML = `<h2>Skills:</h2> <h3>${myJson.Skills.programming}</h3>`
 
-        let div = document.createElement("div");
-        div.innerHTML = `<h3>${[i+1]} ${myJson.Skills.programming[i]}</h3>`
-        document.body.appendChild(div);
-    }
-    let div6= document.createElement("div");
-    div6.innerHTML = `<h3>Hobbies: </h3>`
-    document.body.appendChild(div6);
-    for (let i = 0; i < (myJson.Skills.Hobbies).length; i++) {
+    });
+   
+myJson.Skills.Hobbies.forEach (function (hobby) {
 
-        let div = document.createElement("div");
-        div.innerHTML = `<h3>${[i+1]} ${myJson.Skills.Hobbies[i]}</h3>`
-        document.body.appendChild(div);
-    }
+        div6.innerHTML = `<h2>Hobbies :</h2> <h3>${myJson.Skills.Hobbies} </h3>`
+       
+    });
 });
 
 let div2 = document.createElement("div");
@@ -44,5 +40,10 @@ document.body.appendChild(div4);
 
 let div5 = document.createElement("div");
 div5.innerHTML = `<h2>Skills: </h2>`
+div5.className = "div5"
 document.body.appendChild(div5);
 
+let div6= document.createElement("div");
+div6.innerHTML = `<h2>Hobbies: </h2>`
+div6.className = "div6"
+document.body.appendChild(div6);
