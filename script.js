@@ -34,6 +34,9 @@ let div6= document.createElement("div");
 div6.innerHTML = `<h2>Hobbies: </h2>`
 div6.className = "div6"
 document.body.appendChild(div6);
+//To add an img:
+let img = document.createElement("img");
+document.body.appendChild(img);
 
 //---------------When clicking on Hannas button:
 buttonHanna.addEventListener("click", function() {
@@ -49,5 +52,7 @@ myJson.Skills.Hobbies.forEach (function (hobby) {
 
         div6.innerHTML = `<h2>Hobbies :</h2> <h3>${myJson.Skills.Hobbies} </h3>`  
     });
+
+    img.src = "https://t4.ftcdn.net/jpg/00/41/67/51/360_F_41675161_ZXCYtzeFlNMI5mQ51p4sa5flTttH9bHZ.jpg";
 });
 // ------------------When clicking on Hannas button ends here
