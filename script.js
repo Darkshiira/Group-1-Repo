@@ -1,5 +1,6 @@
 import myJson from "./data/dev/Darkshiira.json" assert { type: "json" };
 import linusJson from "./data/dev/linus.json" assert { type: "json" };
+import erikJson from "./data/dev/ErikThorsson83.json" assert { type: "json" };
 // The webpage is built with different divs.
 //To modify the content you can each change the innerHTML of each divs when clicking on your button.
 
@@ -17,6 +18,12 @@ buttonHanna.innerHTML = `${myJson.firstname}`;
 let linusButton = document.createElement("button");
 document.body.appendChild(linusButton);
 linusButton.innerHTML = `${linusJson.firstname}`;
+
+//Eriks button:
+let erikButton = document.createElement("button");
+document.body.appendChild(erikButton);
+erikButton.innerHTML = `${erikJson.firstname}`;
+
 
 //Name box:
 let div2 = document.createElement("div");
@@ -85,5 +92,16 @@ linusButton.addEventListener('click', function(){
     div5.innerHTML = `<h2>Skills: </h2> <h3>${linusJson.skills}</h3>`
     div6.innerHTML = `<h2>Hobbies: </h2> <h3>${linusJson.hobbies}</h3>`
     img.src = "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=300&q=60"
+  })
+ /*-----------------------------------------------------*/
+
+ /*---------------------Erik Button------------------*/
+erikButton.addEventListener('click', function(){
+    div2.innerHTML = `<h2>Namn:</h2> <h3>${erikJson.firstname} ${erikJson.lastname}</h3>`
+    div3.innerHTML = `<h2>Github: </h2> <h3>${erikJson.github}</h3>`
+    div4.innerHTML = `<h2>Discord: </h2> <h3>${erikJson.discord}</h3>`
+    div5.innerHTML = `<h2>Skills: </h2> <h3>${erikJson.skills}</h3>`
+    div6.innerHTML = `<h2>Hobbies: </h2> <h3>${erikJson.hobbies}</h3>`
+    img.src = "https://www.akc.org/wp-content/uploads/2015/06/Golden-Retriever-laying-down-playing-with-a-cat.jpeg"
   })
  /*-----------------------------------------------------*/
