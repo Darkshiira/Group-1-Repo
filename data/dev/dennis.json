@@ -1,9 +1,12 @@
-{"firstname":"Dennis",
-"lastname":"Tarbiat",
-"discord":"Dennis#3597",
-"github":"DennisTarbiat",
-"personalityType":"Blå",
-"birthYear":"1993",
-"skills":"HTML, CSS, JavaScript", 
-"hobbies":"Programing, Movies, Training",
-"dogCat":"Cat"}
+{
+  "firstname": "Dennis",
+  "lastname": "Tarbiat",
+  "discord": "Dennis#3597",
+  "github": "DennisTarbiat",
+  "personalityType": "Blå",
+  "birthYear": "1993",
+  "skills": "HTML, CSS, JavaScript",
+  "hobbies": "Programing, Movies, Training",
+  "dogCat": "Cat",
+  "imageSource": "https://upload.wikimedia.org/wikipedia/en/f/f6/Tom_Tom_and_Jerry.png"
+}

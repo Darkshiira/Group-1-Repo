@@ -1,8 +1,12 @@
-{"firstname":"Hanna",
-"lastname":"Arefiardakani",
-"discord":"Hanna Arefiardakani#2324",
-"github":"Darkshiira",
-"personalityType":"grön",
-"birthYear":"1987",
-"Skills":{"programming":["HTML", "javascript", "CSS"], "Hobbies":["drawing","gardening", "dogtraining"]},
-"DogCat":"Dog"}
+{
+  "firstname": "Hanna",
+  "lastname": "Arefiardakani",
+  "discord": "Hanna Arefiardakani#2324",
+  "github": "Darkshiira",
+  "personalityType": "grön",
+  "birthYear": "1987",
+  "skills": "HTML, javascript, CSS",
+  "hobbies": "drawing, gardening, dogtraining",
+  "DogCat": "Dog",
+  "imageSource": "https://t4.ftcdn.net/jpg/00/41/67/51/360_F_41675161_ZXCYtzeFlNMI5mQ51p4sa5flTttH9bHZ.jpg"
+}

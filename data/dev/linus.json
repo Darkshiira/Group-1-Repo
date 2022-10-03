@@ -1,9 +1,12 @@
-{"firstname":"Linus",
-"lastname":"Härén",
-"discord":"Haren#2122",
-"github":"HarenIO",
-"personalityType":"blå",
-"birthYear":"1997",
-"skills":"HTML, CSS, JavaScript", 
-"hobbies":"Gaming, programmering, kampsport",
-"DogCat":"Dog"}
+{
+  "firstname": "Linus",
+  "lastname": "Härén",
+  "discord": "Haren#2122",
+  "github": "HarenIO",
+  "personalityType": "blå",
+  "birthYear": "1997",
+  "skills": "HTML, CSS, JavaScript",
+  "hobbies": "Gaming, programmering, kampsport",
+  "DogCat": "Dog",
+  "imageSource": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=300&q=60"
+}

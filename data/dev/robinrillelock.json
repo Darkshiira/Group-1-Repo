@@ -1,9 +1,12 @@
-{"firstname":"Robin",
-"lastname":"Lock",
-"discord":"Robinrillelock#8147",
-"github":"Robinrillelock",
-"personalityType":"grön",
-"birthYear":"1991",
-"skills":"HTML, CSS, JavaScript", 
-"hobbies":"Träna, Landet, programmering",
-"DogCat":"Dog"}
+{
+  "firstname": "Robin",
+  "lastname": "Lock",
+  "discord": "Robinrillelock#8147",
+  "github": "Robinrillelock",
+  "personalityType": "grön",
+  "birthYear": "1991",
+  "skills": "HTML, CSS, JavaScript",
+  "hobbies": "Träna, Landet, programmering",
+  "DogCat": "Dog",
+  "imageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpvsX-D7duS5iCNudvcRgqn_fBQ7KR-zzMA&usqp=CAU"
+}

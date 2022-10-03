@@ -1,9 +1,12 @@
-{"firstname":"Erik",
-"lastname":"Thorsson",
-"discord":"Etor#5132",
-"github":"ErikThorsson83",
-"personalityType":"Grön",
-"birthYear":"1983",
-"skills":"HTML, CSS, JavaScript", 
-"hobbies":"Gaming, training, sleeping",
-"DogCat":"Dog and cat"}
+{
+  "firstname": "Erik",
+  "lastname": "Thorsson",
+  "discord": "Etor#5132",
+  "github": "ErikThorsson83",
+  "personalityType": "Grön",
+  "birthYear": "1983",
+  "skills": "HTML, CSS, JavaScript",
+  "hobbies": "Gaming, training, sleeping",
+  "DogCat": "Dog and cat",
+  "imageSource": "https://www.akc.org/wp-content/uploads/2015/06/Golden-Retriever-laying-down-playing-with-a-cat.jpeg"
+}
