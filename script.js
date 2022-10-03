@@ -2,6 +2,7 @@ import myJson from "./data/dev/Darkshiira.json" assert { type: "json" };
 import linusJson from "./data/dev/linus.json" assert { type: "json" };
 import erikJson from "./data/dev/ErikThorsson83.json" assert { type: "json" };
 import dennis from "./data/dev/dennis.json" assert { type: "json"};
+import robin from "./data/dev/robinrillelock.json" assert {type: "json"};
 // The webpage is built with different divs.
 //To modify the content you can each change the innerHTML of each divs when clicking on your button.
 
@@ -29,6 +30,11 @@ erikButton.innerHTML = `${erikJson.firstname}`;
 let dennisButton = document.createElement("button");
 document.body.appendChild(dennisButton);
 dennisButton.innerHTML = `${dennis.firstname}`;
+
+//Roins button:
+let robinButton = document.createElement("button");
+document.body.appendChild(robinButton);
+robinButton.innerHTML = `${robin.firstname}`;
 
 
 //Name box:
@@ -122,4 +128,12 @@ dennisButton.addEventListener('click', function(){
     div6.innerHTML = `<h2>Hobbies: </h2> <h3>${dennis.hobbies}</h3>`
     img.src = "https://upload.wikimedia.org/wikipedia/en/f/f6/Tom_Tom_and_Jerry.png"
 });
-/*-------------------------------------------------------*/
+/*-----------------------Robins Button-------------------------------*/
+robinButton.addEventListener('click', function(){
+    div2.innerHTML = `<h2>Namn:</h2> <h3>${robin.firstname} ${robin.lastname}</h3>`
+    div3.innerHTML = `<h2>Github: </h2> <h3>${robin.github}</h3>`
+    div4.innerHTML = `<h2>Discord: </h2> <h3>${robin.discord}</h3>`
+    div5.innerHTML = `<h2>Skills: </h2> <h3>${robin.skills}</h3>`
+    div6.innerHTML = `<h2>Hobbies: </h2> <h3>${robin.hobbies}</h3>`
+    img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpvsX-D7duS5iCNudvcRgqn_fBQ7KR-zzMA&usqp=CAU" 
+    });
