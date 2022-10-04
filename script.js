@@ -6,7 +6,7 @@ import robinJson from "./data/dev/robinrillelock.json" assert { type: "json" };
 import mattiasJson from "./data/dev/Mattias.json" assert { type: "json" };
 // The webpage is built with different divs.
 //To modify the content you can each change the innerHTML of each divs when clicking on your button.
-let tmp = false;
+let empty = false;
 let myDivs = [];
 let importList = [
   hannaJson,
@@ -53,7 +53,7 @@ function createButton(jsonName) {
   document.body.appendChild(personButton);
   personButton.innerHTML = jsonName.firstname;
   personButton.addEventListener("click", () => {
-    if (!tmp) {
+    if (!empty) {
       myDivs[1].innerHTML = `<h2>Namn:</h2> <p>${jsonName.firstname} ${jsonName.lastname}</p>`;
       myDivs[2].innerHTML = `<h2>Github: </h2> <p>${jsonName.github}</p>`;
       myDivs[3].innerHTML = `<h2>Discord: </h2> <p>${jsonName.discord}</p>`;
@@ -61,7 +61,7 @@ function createButton(jsonName) {
       myDivs[5].innerHTML = `<h2>Hobbies: </h2> <p>${jsonName.hobbies}</p>`;
       img.src = jsonName.imageSource;
       img.style.width = "400px";
-      tmp = true;
+      empty = true;
     } else {
       myDivs[1].innerHTML = `<h2>Namn:</h2> <p>${""} ${""}</p>`;
       myDivs[2].innerHTML = `<h2>Github: </h2> <p>${""}</p>`;
@@ -70,7 +70,7 @@ function createButton(jsonName) {
       myDivs[5].innerHTML = `<h2>Hobbies: </h2> <p>${""}</p>`;
       img.src = "";
       img.style.width = "";
-      tmp = false;
+      empty = false;
     }
   });
 }
