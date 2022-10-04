@@ -1,12 +1,14 @@
+// Using import to locally extract information from the .json file.
 import hannaJson from "./data/dev/Darkshiira.json" assert { type: "json" };
 import linusJson from "./data/dev/linus.json" assert { type: "json" };
 import erikJson from "./data/dev/ErikThorsson83.json" assert { type: "json" };
 import dennisJson from "./data/dev/dennis.json" assert { type: "json" };
 import robinJson from "./data/dev/robinrillelock.json" assert { type: "json" };
 import mattiasJson from "./data/dev/Mattias.json" assert { type: "json" };
-// The webpage is built with different divs.
-//To modify the content you can each change the innerHTML of each divs when clicking on your button.
-let tmp = false;
+
+// The variable emtpy is a boolean that lets us empty our information on the second button click.
+let empty = false;
+// This is an empty array that we push our divElements into when we call the function createPage
 let myDivs = [];
 let importList = [
   hannaJson,
@@ -16,26 +18,24 @@ let importList = [
   robinJson,
   mattiasJson,
 ];
-let topics = ["Namn", "Github", "Discord", "Skills", "Hobbies"];
+// Its an array that we can loop through to print out our topics. 
+let topics = ["Namn", "Github", "Discord", "Skills", "Hobbies","Cat or Dog" ];
 
-//Title:
+// Its a fuction that creates a HTMLdivelement and log group 1
 createPage("Group 1");
 
-// Everybody's buttons
+// For every person in importlist it calls the function createButton. person is one object in the array
+//
 for (const person of importList) {
   createButton(person);
 }
 
-// All topics
+// For every topic in the array topics it calls the function createPage.
 for (const topic of topics) {
   createPage(topic);
 }
 
-//Cat or Dog box
-let div7 = document.createElement("div");
-div7.innerHTML = `<h2>Cat or Dog: </h2>`;
-document.body.appendChild(div7);
-//To add an img:
+// To add an img:
 let img = document.createElement("img");
 document.body.appendChild(img);
 
@@ -53,7 +53,7 @@ function createButton(jsonName) {
   document.body.appendChild(personButton);
   personButton.innerHTML = jsonName.firstname;
   personButton.addEventListener("click", () => {
-    if (!tmp) {
+    if (!empty) {
       myDivs[1].innerHTML = `<h2>Namn:</h2> <p>${jsonName.firstname} ${jsonName.lastname}</p>`;
       myDivs[2].innerHTML = `<h2>Github: </h2> <p>${jsonName.github}</p>`;
       myDivs[3].innerHTML = `<h2>Discord: </h2> <p>${jsonName.discord}</p>`;
@@ -61,7 +61,7 @@ function createButton(jsonName) {
       myDivs[5].innerHTML = `<h2>Hobbies: </h2> <p>${jsonName.hobbies}</p>`;
       img.src = jsonName.imageSource;
       img.style.width = "400px";
-      tmp = true;
+      empty = true;
     } else {
       myDivs[1].innerHTML = `<h2>Namn:</h2> <p>${""} ${""}</p>`;
       myDivs[2].innerHTML = `<h2>Github: </h2> <p>${""}</p>`;
@@ -70,7 +70,7 @@ function createButton(jsonName) {
       myDivs[5].innerHTML = `<h2>Hobbies: </h2> <p>${""}</p>`;
       img.src = "";
       img.style.width = "";
-      tmp = false;
+      empty = false;
     }
   });
 }
